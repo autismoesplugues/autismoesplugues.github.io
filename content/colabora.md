@@ -14,13 +14,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Si quieres colaborar con nosotros y aportar tu granito de arena, puedes hacer un donativo a nuestro número de cuenta de BBVA
 ES1601829305970202472516
 
-> **Nota**
-> Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
+::: note
+Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
+:::
 
 ### Voluntariado
 
 ### Empresas colaboradoras
 Si eres una empresa, quieres colaborar con nosotros y quieres que tu logo aparezca en nuestra web, escríbenos a autismoneurodiesplugues@gmail.com
 
-> **Nota**
-> Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
+::: note
+Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
+:::

@@ -4,6 +4,7 @@
     --color-3: #b9935a;
     --color-4: #ddc88f;
     --color-5: #ffffc7;
+    --color-note: #f44336;
 }
 
 * {
@@ -325,6 +326,20 @@ body {
     height: 2px;
     background: var(--color-5);
     transition: all 0.3s ease;
+}
+
+.note {
+  background-color: var(--color-4);
+  border-left: 6px solid var(--color-note);
+  border-radius: 5px;
+  padding-left: 15px;
+  margin: 5px 0;
+}
+
+.note::before {
+  content: "Nota:";
+  font-weight: bold;
+  display: block; 
 }
 
 @media (max-width: 768px) {
