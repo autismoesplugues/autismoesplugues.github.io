@@ -7,6 +7,8 @@ css: "styles.css"
 
 ## Quiénes Somos
 
+### La Asociación ANE
+
 La Asociación Autismo y Neurodiversidad Esplugues nace con el firme propósito de ser un agente de cambio en nuestro municipio. Nuestra misión es promover la plena inclusión, el bienestar y los derechos de las personas con autismo y otras neurodiversidades, así como el de sus familias.
 
 Trabajamos desde la convicción de que la transformación solo es posible con la participación de toda la comunidad: ciudadanía, entidades, administraciones y el ámbito científico.
