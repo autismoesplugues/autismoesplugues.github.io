@@ -11,10 +11,15 @@ La Asociación Autismo y Neurodiversidad Esplugues nace con el firme propósito 
 
 Trabajamos desde la convicción de que la transformación solo es posible con la participación de toda la comunidad: ciudadanía, entidades, administraciones y el ámbito científico.
 Nuestros pilares de acción son:
+
 **Inclusión real:** Abogamos por la inclusión social, educativa y laboral efectiva.
+
 **Apoyo integral:** Ofrecemos asesoramiento, formación y recursos a las familias para acompañarlas en su camino.
+
 **Concienciación social:** Sensibilizamos a la sociedad para construir una comunidad más comprensiva y respetuosa con la diversidad neuronal.
+
 **Colaboración institucional:** Trabajamos codo a codo con administraciones públicas y entidades privadas para mejorar los servicios y recursos disponibles.
+
 **Impulso al conocimiento:** Fomentamos la investigación y la formación especializada.
 
 Como parte de nuestro compromiso, actuamos como asesores en planes y programas y servimos como Observatorio por la inclusión y garantía de derechos, velando por el cumplimiento de los mismos y proponiendo mejoras continuas.
