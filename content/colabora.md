@@ -12,7 +12,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Donaciones
 Si quieres colaborar con nosotros y aportar tu granito de arena, puedes hacer un donativo a nuestro número de cuenta de BBVA
-ES1601829305970202472516
+**ES1601829305970202472516**
 
 ::: note
 Por ser una asociación de nueva creación, actualmente los donativos, donaciones y aportaciones no son deducibles
