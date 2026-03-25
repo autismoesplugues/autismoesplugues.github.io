@@ -38,10 +38,8 @@ Integrantes:
 - Presidenta: María Emilia Becerro
 - Secretario: Jordi Daunis
 - Tesorera: Encarnación Ponte
-- Vocal: Vanessa Pérez
 - Vocal: Carolina Cedillo
 - Vocal: Ana Bravo
-- Vocal: Ainhoa Gil
 
 ### Historia de la asociación
 
