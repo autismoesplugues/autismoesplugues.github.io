@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANE | Autismo y Neurodiversidad Esplugues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Questrial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #ffffff;
+            font-size: 16px;
+        }
+
+        /* Escala tipográfica */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #496882;
+        }
+        
+        h2, .section-title {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #496882;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #496882;
+            margin-bottom: 0.75rem;
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #496882;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 0.2rem;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav a:hover {
+            border-bottom-color: #adc7d2;
+            color: #f0f0f0;
+        }
+        
+        /* Estilo especial para "Nuestra sede" */
+        .sede-link {
+            font-weight: bold !important;
+            color: #ff6b6b !important;
+        }
+        
+        .sede-link:hover {
+            color: #ff5252 !important;
+            border-bottom-color: #ff6b6b !important;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        /* Sede Section */
+        .sede-section {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 6px solid #ff6b6b;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        
+        .sede-section h2 {
+            color: #ff6b6b;
+        }
+        
+        .sede-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .sede-text {
+            flex: 2;
+        }
+        
+        .sede-text p {
+            font-size: 1.075rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .sede-highlight {
+            background: #fff0f0;
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border: 1px solid #ffcdcd;
+        }
+        
+        .sede-highlight strong {
+            color: #ff6b6b;
+            font-size: 1.2rem;
+        }
+        
+        .sede-icon {
+            flex: 1;
+            text-align: center;
+            font-size: 5rem;
+        }
+        
+        /* HEADER EN AZUL */
+        header {
+            background-color: #496882;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Mayor presencia del azul en fondos suaves */
+        .about-section, .servicio-card, .voluntario-card, .socio-card, .donacion-card {
+            background: linear-gradient(135deg, #ffffff 0%, #fafcfe 100%);
+            border: 1px solid #adc7d2;
+        }
+        
+        .pilares-grid .pilar {
+            background: #fefefe;
+            border-left: 4px solid #496882;
+            transition: all 0.3s;
+        }
+        
+        .pilares-grid .pilar:hover {
+            background: #f8fafc;
+            border-left-color: #3a556e;
+        }
+        
+        /* Botones */
+        .btn-primary, .cookie-accept, .socio-btn, .donacion-btn {
+            background-color: #496882;
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover, .cookie-accept:hover, .socio-btn:hover, .donacion-btn:hover {
+            background-color: #3a556e;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            border: 2px solid #496882;
+            color: #496882;
+            background: transparent;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #496882;
+            color: white;
+        }
+        
+        .card-tag, .cookie-config {
+            background-color: #eef3f7;
+            color: #496882;
+            border: 1px solid #adc7d2;
+        }
+        
+        /* Cards */
+        .card, .sticker {
+            border: 1px solid #adc7d2;
+            transition: all 0.3s;
+        }
+        
+        .card:hover, .sticker:hover {
+            border-color: #496882;
+            box-shadow: 0 8px 20px rgba(73,104,130,0.12);
+        }
+        
+        .card-image {
+            background: linear-gradient(135deg, #f9fbfd 0%, #f0f5f9 100%);
+            border-bottom: 2px solid #adc7d2;
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        /* Sticker */
+        .sticker {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9fe 100%);
+            border-radius: 80px;
+            padding: 1.2rem 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 8px 20px rgba(73,104,130,0.1);
+        }
+        
+        .sticker-btn {
+            background-color: #496882;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Socio y Donaciones */
+        .socio-donacion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .socio-card, .donacion-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .socio-card:hover, .donacion-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .socio-icon, .donacion-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .bank-info {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border: 1px solid #adc7d2;
+        }
+        
+        .bank-info p {
+            font-family: monospace;
+            color: #496882;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Estilo especial para la tarjeta de ubicación - sin dirección */
+        .location-note {
+            font-size: 1rem;
+            color: #ff6b6b;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        
+        .location-note strong {
+            color: #ff6b6b;
+        }
+        
+        .location-note a {
+            color: #ff6b6b;
+            text-decoration: underline;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .about-text p, .about-text li {
+            font-size: 1.075rem;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .pilar {
+            padding: 1rem;
+        }
+        
+        .pilar p {
+            font-size: 0.975rem;
+        }
+        
+        /* Servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .servicio-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .servicio-card p {
+            font-size: 1rem;
+        }
+        
+        .servicio-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Sticker container */
+        .sticker-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .sticker-text {
+            text-align: left;
+        }
+        
+        .sticker-text strong {
+            font-size: 1.25rem;
+            color: #496882;
+        }
+        
+        .sticker-text p {
+            font-size: 0.925rem;
+            color: #666;
+        }
+        
+        /* Voluntariado */
+        .voluntario-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .voluntario-card p {
+            font-size: 1.075rem;
+        }
+        
+        /* Cookie Panel */
+        .cookie-panel {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            border-top: 2px solid #adc7d2;
+        }
+        
+        .cookie-panel.active {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .cookie-content p {
+            font-size: 0.95rem;
+        }
+        
+        .cookie-buttons {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-btn {
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Questrial', sans-serif;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #fafcfd 0%, #f5f8fc 100%);
+            color: #555;
+            margin-top: 3rem;
+            border-top: 2px solid #adc7d2;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section a:hover {
+            color: #496882;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .about-grid, .socio-donacion-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-grid, .servicios-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sticker {
+                flex-direction: column;
+                text-align: center;
+                border-radius: 30px;
+                padding: 1.5rem;
+            }
+            
+            .sticker-text {
+                text-align: center;
+            }
+            
+            .sede-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2, .section-title {
+                font-size: 1.7rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>ANE</h1>
+                <p>Asociación Autismo y Neurodiversidad Esplugues</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#quienes-somos">Quiénes somos</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#apoyo">Apóyanos</a></li>
+                    <li><a href="#voluntariado">Voluntariado</a></li>
+                    <li><a href="#sede" class="sede-link">📌 Nuestra sede</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Quiénes somos -->
+        <section id="quienes-somos" class="about-section">
+            <h2 class="section-title">Quiénes somos</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Asociación Autismo y Neurodiversidad Esplugues (ANE)</h3>
+                    <p>La Asociación Autismo y Neurodiversidad Esplugues (ANE) nace con el propósito de promover la inclusión, el bienestar y la defensa de los derechos de las personas con autismo y otras neurodivergencias, así como de sus familias en Esplugues de Llobregat y el área de Barcelona.</p>
+                    <p>Trabajamos para ofrecer apoyo a familias con personas neurodivergentes mediante asesoramiento, formación y acceso a recursos, acompañando en procesos clave como el diagnóstico, la educación y la inclusión social.</p>
+                    <p>Creemos que una sociedad más inclusiva solo es posible con la implicación de toda la comunidad: ciudadanía, entidades, administraciones públicas y el ámbito científico.</p>
+                </div>
+                <div class="about-text">
+                    <h3>Nuestros pilares</h3>
+                    <div class="pilares-grid">
+                        <div class="pilar">
+                            <h4>🏛️ Inclusión real</h4>
+                            <p>Promovemos la inclusión social, educativa y laboral de personas con autismo y neurodivergencia.</p>
+                        </div>
+                        <div class="pilar">
+                            <h4>👨‍👩‍👧 Apoyo integral a familias</h4>
+                            <p>Ofrecemos orientación, formación y recursos. Creamos redes que fortalezcan la contención emocional entre cuidadores.</p>
+                        </div>
+                        <div class="pilar">
+                            <h4>🎓 Talleres por profesionales</h4>
+                            <p>Espacios de encuentro periódico con conocimientos actualizados y charlas especializadas.</p>
+                        </div>
+                        <div class="pilar">
+                            <h4>🤝 Concienciación social</h4>
+                            <p>Impulsamos acciones de sensibilización sobre el autismo y la neurodiversidad.</p>
+                        </div>
+                        <div class="pilar">
+                            <h4>🏛️ Colaboración institucional</h4>
+                            <p>Trabajamos con administraciones públicas y entidades privadas.</p>
+                        </div>
+                        <div class="pilar">
+                            <h4>📚 Impulso al conocimiento</h4>
+                            <p>Fomentamos la investigación, la formación especializada y la divulgación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text" style="margin-top: 2rem;">
+                <h3>Nuestro compromiso</h3>
+                <p>Actuamos como entidad asesora en planes y programas, además de funcionar como observatorio para la inclusión y la garantía de derechos de las personas neurodivergentes, proponiendo mejoras continuas en los recursos y servicios disponibles.</p>
+                <h3>Propósito de la asociación</h3>
+                <p>En la Asociación Autismo y Neurodiversidad Esplugues creemos en un futuro donde la diversidad no solo sea aceptada, sino valorada. Te invitamos a formar parte de este proyecto y a construir, juntos, un Esplugues más justo, inclusivo y consciente de la riqueza que aporta cada persona.</p>
+            </div>
+        </section>
+
+        <!-- Sección Historia -->
+        <section id="historia" class="about-section">
+            <h2 class="section-title">Historia</h2>
+            <div class="about-text">
+                <h3>Asociación Autismo y Neurodiversidad Esplugues</h3>
+                <p>La Asociación Autismo y Neurodiversidad Esplugues nace de la iniciativa de un grupo de familias con hijos e hijas con autismo y otras neurodivergencias en Esplugues de Llobregat, ante la necesidad de mejorar el apoyo y la coordinación entre los servicios de salud, la atención terapéutica y la inclusión educativa.</p>
+                <p>Muchas familias compartían una misma realidad: la falta de recursos, orientación y acompañamiento, lo que a menudo genera aislamiento y dificulta el desarrollo y bienestar de los niños y niñas con autismo.</p>
+                <p>Por ello, creemos firmemente que las familias son el motor del cambio y un elemento clave para impulsar iniciativas que favorezcan la inclusión, el acceso a recursos y la mejora de la calidad de vida de las personas neurodivergentes.</p>
+                <p>Defendemos que la infancia es una etapa fundamental, y trabajamos para que cada niño y niña tenga acceso a las oportunidades, apoyos y recursos necesarios para alcanzar una plena inclusión social y una futura autonomía.</p>
+                <p><strong>Trabajamos para que cada paso cuente y cada avance sume.</strong></p>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios">
+            <h2 class="section-title">Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">🧭</div>
+                    <h3>Asesoría en diagnóstico y crianza neurodivergente</h3>
+                    <p>Acompañamos a familias que forman parte del mundo neurodivergente ofreciendo orientación clara y personalizada. Te ayudamos en la búsqueda de ayudas económicas, en el proceso de diagnóstico y en la aplicación de estrategias educativas desde un enfoque de crianza respetuosa.</p>
+                    <p>Sesiones disponibles de forma presencial o online, adaptadas a tus necesidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN APÓYANOS: Socio y Donaciones separados -->
+        <section id="apoyo">
+            <h2 class="section-title">Apóyanos</h2>
+            <p class="section-subtitle">Tu colaboración es fundamental para seguir avanzando</p>
+            
+            <div class="socio-donacion-grid">
+                <!-- Hazte socio -->
+                <div class="socio-card">
+                    <div class="socio-icon">🤝✨</div>
+                    <h3>Hazte socio/a</h3>
+                    <p>Con tu cuota de socio/a nos ayudas a mantener nuestros programas de apoyo, talleres y asesoramiento. Además, formarás parte de nuestra comunidad y recibirás información exclusiva sobre nuestras actividades.</p>
+                    <p><strong>Cuota anual: 50€</strong><br>(30€ para familias numerosas o en situación de vulnerabilidad)</p>
+                    <a href="#" class="socio-btn">Formulario de inscripción</a>
+                </div>
+
+                <!-- Donaciones -->
+                <div class="donacion-card">
+                    <div class="donacion-icon">💙✨</div>
+                    <h3>Donaciones</h3>
+                    <p>Si lo prefieres, puedes realizar una donación puntual. Cada aportación, por pequeña que sea, nos acerca un paso más a nuestros objetivos.</p>
+                    <div class="bank-info">
+                        <p>📍 DATOS BANCARIOS</p>
+                        <p><strong>IBAN:</strong> ES21 0128 0456 7890 1234 5678</p>
+                        <p><strong>Cuenta:</strong> 0128-0456-78-0123456789</p>
+                        <p><strong>Titular:</strong> Asociación ANE</p>
+                        <p><strong>Concepto:</strong> Donación ANE</p>
+                    </div>
+                    <p>También puedes donar mediante Bizum al <strong>12345</strong> (indicando "ANE")</p>
+                    <button class="donacion-btn" onclick="copyBankData()">📋 Copiar datos bancarios</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticker vistoso recordatorio -->
+        <div class="sticker-container">
+            <div class="sticker">
+                <div class="sticker-emoji">💙✨🤝</div>
+                <div class="sticker-text">
+                    <strong>Cada gesto cuenta</strong>
+                    <p>Hazte socio o realiza una donación. Juntos construimos inclusión.</p>
+                </div>
+                <a href="#apoyo" class="sticker-btn">Quiero colaborar</a>
+            </div>
+        </div>
+
+        <!-- Sección Voluntariado -->
+        <section id="voluntariado">
+            <div class="voluntario-card">
+                <h2 class="section-title">Voluntariado en ANE</h2>
+                <h3>Hazte voluntario/a</h3>
+                <p>¿Te gustaría formar parte de un cambio real en tu comunidad?</p>
+                <p>En la Asociación Autismo y Neurodiversidad Esplugues creemos en el poder de las personas para transformar la sociedad. Por eso, abrimos nuestras puertas a voluntarios y voluntarias que quieran aportar su tiempo, su energía y su compromiso con la inclusión.</p>
+                <p><strong>No necesitas experiencia, solo sensibilidad, respeto y ganas de sumar.</strong></p>
+                <p>Cada gesto cuenta. Cada apoyo marca la diferencia.</p>
+                <a href="#" class="btn-primary">Inscríbete como voluntario</a>
+            </div>
+        </section>
+
+        <!-- Sección Nuestra Sede -->
+        <section id="sede" class="sede-section">
+            <h2 class="section-title">📌 Nuestra sede</h2>
+            <div class="sede-content">
+                <div class="sede-text">
+                    <p>La asociación ANE no cuenta con una sede propia en estos momentos, a pesar de tener un gran apoyo por parte de la comunidad.</p>
+                    <div class="sede-highlight">
+                        <strong>✨ Más de 4.000 firmas</strong>
+                        <p>Hemos entregado al Ayuntamiento de Esplugues más de 4.000 firmas de apoyo ciudadano solicitando un espacio para nuestra asociación. Esta movilización demuestra la necesidad y el respaldo de la comunidad.</p>
+                    </div>
+                    <p><strong>Esperamos contar con un espacio lo antes posible</strong> para poder ofrecer un lugar de encuentro, atención y desarrollo de actividades para las personas con autismo y neurodiversidad, así como para sus familias.</p>
+                    <p>Mientras tanto, seguimos trabajando desde la colaboración institucional y el apoyo de entidades locales para llevar a cabo nuestros programas y talleres en espacios cedidos.</p>
+                </div>
+                <div class="sede-icon">
+                    🏛️✊
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📍 Dónde estamos</h3>
+                        <div class="location-note">
+                            <strong>📌 Aún no disponemos de local propio.</strong><br>
+                            <a href="#sede">Más información sobre nuestra sede →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📞 Teléfono</h3>
+                        <p>+34 93 123 45 67<br>(Lunes a viernes, 10h-14h)</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📧 Email</h3>
+                        <p>info@ane-esplugues.org</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>📱 Redes sociales</h3>
+                        <p>Instagram: @ane_esplugues<br>Facebook: /ANEesplugues</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>ANE</h4>
+                <p>Autismo y Neurodiversidad Esplugues</p>
+                <p>Trabajando por una comunidad más inclusiva.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <p><a href="#quienes-somos">Quiénes somos</a></p>
+                <p><a href="#historia">Historia</a></p>
+                <p><a href="#servicios">Servicios</a></p>
+                <p><a href="#apoyo">Apóyanos</a></p>
+                <p><a href="#voluntariado">Voluntariado</a></p>
+                <p><a href="#sede">Nuestra sede</a></p>
+                <p><a href="#contacto">Contacto</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p><a href="#">Aviso legal</a></p>
+                <p><a href="#">Política de privacidad</a></p>
+                <p><a href="#" id="open-cookie-settings">Política de cookies</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Subvenciones</h4>
+                <p>Proyecto subvencionado por el Ayuntamiento de Esplugues de Llobregat y la Diputación de Barcelona.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Asociación Autismo y Neurodiversidad Esplugues (ANE). Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Panel -->
+    <div id="cookiePanel" class="cookie-panel">
+        <div class="cookie-content">
+            <p><strong>Política de Cookies</strong></p>
+            <p>Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación, analizar el uso de la web y mostrarte contenido relacionado con tus preferencias. Puedes configurar o rechazar las cookies mediante el panel de configuración.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn cookie-accept">Aceptar todas</button>
+                <button id="configureCookies" class="cookie-btn cookie-config">Configurar</button>
+                <button id="rejectCookies" class="cookie-btn cookie-config">Rechazar todas</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie panel logic
+        const cookiePanel = document.getElementById('cookiePanel');
+        
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookiePanel.classList.add('active');
+        }
+
+        document.getElementById('acceptCookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'all');
+            cookiePanel.classList.remove('active');
+        });
+
+        document.getElementById('rejectCookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'none');
+            cookiePanel.classList.remove('active');
+        });
+
+        document.getElementById('configureCookies').addEventListener('click', function() {
+            alert('Panel de configuración avanzada de cookies.\n\nEn una implementación real, aquí se mostrarían las opciones:\n- Cookies técnicas (siempre activas)\n- Cookies de preferencias\n- Cookies de estadísticas\n- Cookies de marketing');
+        });
+
+        document.getElementById('open-cookie-settings').addEventListener('click', function(e) {
+            e.preventDefault();
+            cookiePanel.classList.add('active');
+        });
+
+        // SMOOTH SCROLLING CON OFFSET PARA COMPENSAR EL HEADER FIJO
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === "#" || targetId === "") return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    // Altura del header fijo (puedes ajustar este valor según tu header)
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // 20px de margen extra
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Function to copy bank data
+        function copyBankData() {
+            const bankText = "IBAN: ES21 0128 0456 7890 1234 5678\nCuenta: 0128-0456-78-0123456789\nTitular: Asociación ANE\nConcepto: Donación ANE";
+            navigator.clipboard.writeText(bankText).then(() => {
+                alert("Datos bancarios copiados al portapapeles");
+            }).catch(() => {
+                alert("No se pudo copiar automáticamente. Los datos son:\n" + bankText);
+            });
+        }
+        
+        window.copyBankData = copyBankData;
+    </script>
+</body>
+</html>
+
+
+
