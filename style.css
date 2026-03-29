@@ -40,6 +40,17 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
 .logo h1 {
     font-size: 2.2rem;
     color: white;
@@ -158,6 +169,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 /* Mayor presencia del azul en fondos suaves */
@@ -591,21 +603,22 @@ footer {
 }
 /* Language Switcher */
 .lang-switcher {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
     display: flex;
     gap: 0.5rem;
-    margin-left: 1.5rem; /* Adjust spacing as needed */
 }
 
 .lang-btn {
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
     color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .lang-btn:hover {
@@ -614,9 +627,9 @@ footer {
 }
 
 .lang-btn.active {
-    background-color: #adc7d2;
+    background: white;
     color: #496882;
-    border-color: #adc7d2;
+    font-weight: 600;
 }
 
 /* Adjust header container for language switcher */
@@ -641,6 +654,7 @@ footer {
     }
 
     .lang-switcher {
-        margin-left: 0; /* Center on mobile */
+        position: static;
+        margin-top: 1rem;
     }
 }
