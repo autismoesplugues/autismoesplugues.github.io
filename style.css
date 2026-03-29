@@ -589,3 +589,58 @@ footer {
         font-size: 1.3rem;
     }
 }
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1.5rem; /* Adjust spacing as needed */
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #adc7d2;
+}
+
+.lang-btn.active {
+    background-color: #adc7d2;
+    color: #496882;
+    border-color: #adc7d2;
+}
+
+/* Adjust header container for language switcher */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    nav { /* Adjust nav to include lang switcher in column */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .lang-switcher {
+        margin-left: 0; /* Center on mobile */
+    }
+}
