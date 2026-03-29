@@ -44,7 +44,7 @@ export async function loadAllSections(lang, mainContent) {
     }
 }
 
-export function setLanguage(lang, mainContent) {
+export function setLanguage(lang) {
     if (currentLang === lang) return;
 
     currentLang = lang;

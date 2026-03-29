@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     langButtons.forEach(button => {
         button.addEventListener('click', async () => {
             const newLang = button.dataset.lang;
-            const lang = LanguageManager.setLanguage(newLang, mainContent);
+            const lang = LanguageManager.setLanguage(newLang);
             
             // Reload content for new language
             await LanguageManager.loadAllSections(newLang, mainContent);
