@@ -1,0 +1,660 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+/* Escala tipográfica */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #496882;
+}
+
+h2, .section-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #496882;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #496882;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #496882;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom-color: #adc7d2;
+    color: #f0f0f0;
+}
+
+/* Estilo especial para "Nuestra sede" */
+.sede-link {
+    font-weight: bold !important;
+    color: #ff6b6b !important;
+}
+
+.sede-link:hover {
+    color: #ff5252 !important;
+    border-bottom-color: #ff6b6b !important;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Sede Section */
+.sede-section {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-left: 6px solid #ff6b6b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.sede-section h2 {
+    color: #ff6b6b;
+}
+
+.sede-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sede-text {
+    flex: 2;
+}
+
+.sede-text p {
+    font-size: 1.075rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.sede-highlight {
+    background: #fff0f0;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    border: 1px solid #ffcdcd;
+}
+
+.sede-highlight strong {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+}
+
+.sede-icon {
+    flex: 1;
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* HEADER EN AZUL */
+header {
+    background-color: #496882;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Mayor presencia del azul en fondos suaves */
+.about-section, .servicio-card, .voluntario-card, .socio-card, .donacion-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fafcfe 100%);
+    border: 1px solid #adc7d2;
+}
+
+.pilares-grid .pilar {
+    background: #fefefe;
+    border-left: 4px solid #496882;
+    transition: all 0.3s;
+}
+
+.pilares-grid .pilar:hover {
+    background: #f8fafc;
+    border-left-color: #3a556e;
+}
+
+/* Botones */
+.btn-primary, .cookie-accept, .socio-btn, .donacion-btn {
+    background-color: #496882;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary:hover, .cookie-accept:hover, .socio-btn:hover, .donacion-btn:hover {
+    background-color: #3a556e;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid #496882;
+    color: #496882;
+    background: transparent;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #496882;
+    color: white;
+}
+
+.card-tag, .cookie-config {
+    background-color: #eef3f7;
+    color: #496882;
+    border: 1px solid #adc7d2;
+}
+
+/* Cards */
+.card, .sticker {
+    border: 1px solid #adc7d2;
+    transition: all 0.3s;
+}
+
+.card:hover, .sticker:hover {
+    border-color: #496882;
+    box-shadow: 0 8px 20px rgba(73,104,130,0.12);
+}
+
+.card-image {
+    background: linear-gradient(135deg, #f9fbfd 0%, #f0f5f9 100%);
+    border-bottom: 2px solid #adc7d2;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+/* Sticker */
+.sticker {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f9fe 100%);
+    border-radius: 80px;
+    padding: 1.2rem 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 8px 20px rgba(73,104,130,0.1);
+}
+
+.sticker-btn {
+    background-color: #496882;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Socio y Donaciones */
+.socio-donacion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.socio-card, .donacion-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.socio-card:hover, .donacion-card:hover {
+    transform: translateY(-5px);
+}
+
+.socio-icon, .donacion-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bank-info {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    border: 1px solid #adc7d2;
+}
+
+.bank-info p {
+    font-family: monospace;
+    color: #496882;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo especial para la tarjeta de ubicación - sin dirección */
+.location-note {
+    font-size: 1rem;
+    color: #ff6b6b;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.location-note strong {
+    color: #ff6b6b;
+}
+
+.location-note a {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-text p, .about-text li {
+    font-size: 1.075rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.pilar {
+    padding: 1rem;
+}
+
+.pilar p {
+    font-size: 0.975rem;
+}
+
+/* Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.servicio-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.servicio-card p {
+    font-size: 1rem;
+}
+
+.servicio-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sticker container */
+.sticker-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.sticker-text {
+    text-align: left;
+}
+
+.sticker-text strong {
+    font-size: 1.25rem;
+    color: #496882;
+}
+
+.sticker-text p {
+    font-size: 0.925rem;
+    color: #666;
+}
+
+/* Voluntariado */
+.voluntario-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.voluntario-card p {
+    font-size: 1.075rem;
+}
+
+/* Cookie Panel */
+.cookie-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    border-top: 2px solid #adc7d2;
+}
+
+.cookie-panel.active {
+    transform: translateY(0);
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-content p {
+    font-size: 0.95rem;
+}
+
+.cookie-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Questrial', sans-serif;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #fafcfd 0%, #f5f8fc 100%);
+    color: #555;
+    margin-top: 3rem;
+    border-top: 2px solid #adc7d2;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section a:hover {
+    color: #496882;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .about-grid, .socio-donacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-grid, .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sticker {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 30px;
+        padding: 1.5rem;
+    }
+
+    .sticker-text {
+        text-align: center;
+    }
+
+    .sede-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, .section-title {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+/* Language Switcher */
+.lang-switcher {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #adc7d2;
+}
+
+.lang-btn.active {
+    background: white;
+    color: #496882;
+    font-weight: 600;
+}
+
+/* Adjust header container for language switcher */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    nav { /* Adjust nav to include lang switcher in column */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .lang-switcher {
+        position: static;
+        margin-top: 1rem;
+    }
+}
