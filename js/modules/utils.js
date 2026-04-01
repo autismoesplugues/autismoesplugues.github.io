@@ -1,3 +1,12 @@
+export function renderEmailLink(elementId, user, domain) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+
+    const email = `${user}@${domain}`;
+
+    el.href = `mailto:${email}`;
+}
+
 export function renderBankIban(bankData) {
     const el = document.getElementById('iban-value');
     if (!el) return;

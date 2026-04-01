@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Render bank data
     Utils.renderBankIban(LanguageManager.getBankData());
+    Utils.renderEmailLink("email-link", "autismoneurodiesplugues", "gmail.com");
     
     // Language switcher event listeners
     langButtons.forEach(button => {
