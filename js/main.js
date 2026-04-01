@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Render bank data
     Utils.renderBankIban(LanguageManager.getBankData());
+
+    // Render email
     Utils.renderEmailLink("email-link", "autismoneurodiesplugues", "gmail.com");
     
     // Language switcher event listeners
@@ -63,6 +65,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Render bank data
             Utils.renderBankIban(LanguageManager.getBankData());
+
+            // Render email
+            Utils.renderEmailLink("email-link", "autismoneurodiesplugues", "gmail.com");
 
             // Update cookie panel
             Cookies.updateCookiePanelContent(LanguageManager.getCookieContent());
