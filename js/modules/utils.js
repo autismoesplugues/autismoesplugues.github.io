@@ -1,9 +1,35 @@
+export function renderBankIban(bankData) {
+    const el = document.getElementById('iban-value');
+    if (!el) return;
+
+    el.textContent = bankData.iban;
+}
+
 export function copyBankData(bankData) {
-    navigator.clipboard.writeText(bankData.text).then(() => {
-        alert(bankData.alertSuccess);
-    }).catch(() => {
-        alert(bankData.alertFail + bankData.text);
-    });
+    const text = bankData.iban;
+
+    if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(text)
+            .catch(() => fallbackCopy(text, bankData));
+    } else {
+        fallbackCopy(text, bankData);
+    }
+}
+
+function fallbackCopy(text, bankData) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+        const success = document.execCommand("copy");
+        if (!success) throw new Error();
+    } catch {
+        alert(bankData.alertFail + text);
+    }
+
+    document.body.removeChild(textarea);
 }
 
 export function attachSmoothScrolling() {

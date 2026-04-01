@@ -6,7 +6,7 @@ export function updateHeaderNavLinks(lang) {
         'servicios': { es: 'Servicios', ca: 'Serveis' },
         'apoyo': { es: 'Apóyanos', ca: 'Dona suport' },
         'voluntariado': { es: 'Voluntariado', ca: 'Voluntariat' },
-        'sede': { es: '📌 Nuestra sede', ca: '📌 La nostra seu' },
+        'sede': { es: 'Nuestra sede', ca: 'La nostra seu' },
         'contacto': { es: 'Contacto', ca: 'Contacte' }
     };
     navLinks.forEach(link => {

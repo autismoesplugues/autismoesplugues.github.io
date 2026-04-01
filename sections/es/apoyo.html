@@ -1,30 +1,34 @@
 <section id="apoyo">
     <h2 class="section-title">Apóyanos</h2>
-    <p class="section-subtitle">Tu colaboración es fundamental para seguir avanzando</p>
     
     <div class="socio-donacion-grid">
         <!-- Hazte socio -->
         <div class="socio-card">
-            <div class="socio-icon"><i class="fa-solid fa-address-card"></i></div>
-            <h3>Hazte socio/a</h3>
-            <p>Con tu cuota de socio/a nos ayudas a mantener nuestros programas de apoyo, talleres y asesoramiento. Además, formarás parte de nuestra comunidad y recibirás información exclusiva sobre nuestras actividades.</p>
-            <p><strong>Cuota anual: 50€</strong><br>(30€ para familias numerosas o en situación de vulnerabilidad)</p>
+            <h3><i class="fa-solid fa-address-card"></i> Hazte socio/a</h3>
+            <p>Tu colaboración es fundamental para seguir avanzando.</p>
+            <p>Con tu cuota de socio/a nos ayudas a mantener nuestros programas de apoyo, talleres y asesoramiento.</p>
+            <p>Además, formarás parte de nuestra comunidad y recibirás información exclusiva sobre nuestras actividades.</p>
+            <p><strong>Cuota anual:</strong><br>
+            <ul>
+                <li><strong>Tarifa regular:</strong> 50€</li>
+                <li><strong>Tarifa reducida:</strong> 30€ (para familias numerosas o en situación de vulnerabilidad)</li>
+            </ul>
             <a href="#" class="socio-btn">Formulario de inscripción</a>
         </div>
 
         <!-- Donaciones -->
         <div class="donacion-card">
-            <div class="donacion-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <h3>Donaciones</h3>
+            <h3><i class="fa-solid fa-hand-holding-heart"></i> Donaciones</h3>
             <p>Si lo prefieres, puedes realizar una donación puntual. Cada aportación, por pequeña que sea, nos acerca un paso más a nuestros objetivos.</p>
             <div class="bank-info">
                 <p><i class="fa-solid fa-coins"></i> DATOS BANCARIOS</p>
-                <p><strong>IBAN:</strong> ES16 0182 9305 9702 0247 2516</p>
-                <p><strong>Cuenta:</strong> 0128-0456-78-0123456789</p>
-                <p><strong>Titular:</strong> Asociación ANE</p>
+                <p><strong>IBAN:</strong> <span id="iban-value"></span></p>
+                <p><strong>Titular:</strong> Asociación Autismo y Neurodiversidad Esplugues</p>
                 <p><strong>Concepto:</strong> Donación ANE</p>
             </div>
-            <button class="donacion-btn" onclick="copyBankData()"><i class="fa-solid fa-copy"></i> Copiar datos bancarios</button>
+            <button class="donacion-btn" onclick="copyBankData()">
+                <i class="fa-solid fa-copy"></i> Copiar
+            </button>
         </div>
     </div>
 </section>

@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     Utils.reinitializeDynamicListeners(() => {
         Utils.copyBankData(LanguageManager.getBankData());
     });
+
+    // Render bank data
+    Utils.renderBankIban(LanguageManager.getBankData());
     
     // Language switcher event listeners
     langButtons.forEach(button => {
@@ -56,7 +59,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             Navigation.updateHeaderNavLinks(newLang);
             Navigation.updateFooterNavLinks(newLang);
             Navigation.updateOtherStaticElements(newLang);
-            
+
+            // Render bank data
+            Utils.renderBankIban(LanguageManager.getBankData());
+
             // Update cookie panel
             Cookies.updateCookiePanelContent(LanguageManager.getCookieContent());
             

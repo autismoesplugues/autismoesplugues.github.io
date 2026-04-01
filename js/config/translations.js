@@ -17,12 +17,12 @@ export const cookiePanelContent = {
 
 export const bankData = {
     es: {
-        text: "IBAN: ES21 0128 0456 7890 1234 5678\nCuenta: 0128-0456-78-0123456789\nTitular: Asociación ANE\nConcepto: Donación ANE",
+        iban: "ES16 0182 9305 9702 0247 2516",
         alertSuccess: "Datos bancarios copiados al portapapeles",
         alertFail: "No se pudo copiar automáticamente. Los datos son:\n"
     },
     ca: {
-        text: "IBAN: ES21 0128 0456 7890 1234 5678\nCompte: 0128-0456-78-0123456789\nTitular: Associació ANE\nConcepte: Donació ANE",
+        iban: "ES16 0182 9305 9702 0247 2516",
         alertSuccess: "Dades bancàries copiades al porta-retalls",
         alertFail: "No s'ha pogut copiar automàticament. Les dades són:\n"
     }

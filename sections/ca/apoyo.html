@@ -1,30 +1,34 @@
 <section id="apoyo">
     <h2 class="section-title">Dona suport</h2>
-    <p class="section-subtitle">La teva col·laboració és fonamental per seguir avançant</p>
     
     <div class="socio-donacion-grid">
         <!-- Fes-te soci -->
         <div class="socio-card">
-            <div class="socio-icon"><i class="fa-solid fa-address-card"></i></div>
-            <h3>Fes-te soci/a</h3>
-            <p>Amb la teva quota de soci/a ens ajudes a mantenir els nostres programes de suport, tallers i assessorament. A més, formaràs part de la nostra comunitat i rebràs informació exclusiva sobre les nostres activitats.</p>
-            <p><strong>Quota anual: 50€</strong><br>(30€ per a famílies nombroses o en situació de vulnerabilitat)</p>
+            <h3><i class="fa-solid fa-address-card"></i> Fes-te soci/a</h3>
+            <p>La teva col·laboració és fonamental per seguir avançant.</p>
+            <p>Amb la teva quota de soci/a ens ajudes a mantenir els nostres programes de suport, tallers i assessorament.</p>
+            <p>A més, formaràs part de la nostra comunitat i rebràs informació exclusiva sobre les nostres activitats.</p>
+            <p><strong>Quota anual:</strong><br>
+            <ul>
+                <li><strong>Tarifa regular:</strong> 50€</li>
+                <li><strong>Tarifa reduïda:</strong> 30€ (per a famílies nombroses o en situació de vulnerabilitat)</li>
+            </ul>
             <a href="#" class="socio-btn">Formulari d'inscripció</a>
         </div>
 
         <!-- Donacions -->
         <div class="donacion-card">
-            <div class="donacion-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <h3>Donacions</h3>
+            <h3><i class="fa-solid fa-hand-holding-heart"></i> Donacions</h3>
             <p>Si ho prefereixes, pots fer una donació puntual. Cada aportació, per petita que sigui, ens acosta un pas més als nostres objectius.</p>
             <div class="bank-info">
                 <p><i class="fa-solid fa-coins"></i> DADES BANCÀRIES</p>
-                <p><strong>IBAN:</strong> ES16 0182 9305 9702 0247 2516</p>
-                <p><strong>Compte:</strong> 0128-0456-78-0123456789</p>
-                <p><strong>Titular:</strong> Associació ANE</p>
+                <p><strong>IBAN:</strong> <span id="iban-value"></span></p>
+                <p><strong>Titular:</strong> Associació Autisme i Neurodiversitat Esplugues</p>
                 <p><strong>Concepte:</strong> Donació ANE</p>
             </div>
-            <button class="donacion-btn" onclick="copyBankData()"><i class="fa-solid fa-copy"></i> Copiar dades bancàries</button>
+            <button class="donacion-btn" onclick="copyBankData()">
+                <i class="fa-solid fa-copy"></i> Copiar dades bancàries
+            </button>
         </div>
     </div>
 </section>
